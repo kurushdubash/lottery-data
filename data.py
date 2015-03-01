@@ -8,23 +8,31 @@ import requests
 nysixnum = "https://data.ny.gov/resource/d6yy-54nr.json"
 nyfivemeg = "https://data.ny.gov/resource/5xaw-6ayf.json"
 
-
-
 def get_lottery_data(URL):
 	"""Returns data (which is list of dictionaries) for Lottery"""
 	data = requests.get(URL) #one bigass list where each item is a dictionary. 
 	data = data.json() #from object to dictionary
 	return data
 
-def get_lottery_numbers():
+def get_lottery_numbers(URL):
 	"""Returns an array of the frequency of each number in the lottery"""
-	return 0
+	thelist = get_lottery_data(URL)
+	# size = nyfivemeg.length
+	win_numbers = []
+	for element in thelist:
+		win_numbers.append(element['winning_numbers'])
+	return win_numbers
+
+def how_many_entries(URL):
+	return len(get_lottery_numbers(URL))
 
 def get_mega_numbers():
 	"""Returns an array of mega numbers"""
 	return 0
 
 def parse_data(data):
+	"""takes in string and converts to int"""
+	
 	return 0
 
 def probability(lottery_array):
