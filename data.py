@@ -34,6 +34,8 @@ def get_mega_numbers(URL):
 	result=[];
 	data=get_lottery_data(URL)
 	for e in data:
+		if e["draw_date"]=="2013-10-29T00:00:00":
+			break;
 		result.append(int (e["mega_ball"]))
 	return result
 
@@ -73,8 +75,9 @@ def frequency_mega(lottery_array):
 		result_numbers[element]=result_numbers[element]+1
 	return result_numbers
 def probability(lottery_array):
-	"""Takes in a tuple where lottery_array[0] is an array of 5 get_array_of_numbers
-		and lottery_array[1] is the mega number"""
+	"""Takes in a tuple where lottery_array[0] is an array of number frequency by index
+		and lottery_array[1] is the frequency of mega numbers by index"""
+
 		
 
 def random_lottery():
