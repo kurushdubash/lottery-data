@@ -27,7 +27,8 @@ def how_many_entries(URL):
 	return len(get_lottery_numbers(URL))
 
 def get_mega_numbers(URL):
-	"""Returns an array of mega numbers"""
+	"""Input: URL of selected lottery
+		Output: Array of ints containing every single megaball number"""
 	result=[];
 	data=get_lottery_data(URL)
 	for e in data:
@@ -44,7 +45,12 @@ def parse_data(data):
 def probability(lottery_array):
 	"""Takes in a tuple where lottery_array[0] is an array of 5 get_array_of_numbers
 		and lottery_array[1] is the mega number"""
-	return 0
+	result_numbers=[0 for x in range(76)]
+	for element in lottery_array[0]:
+		for element1 in element:
+			result_numbers[element1]=result_numbers[element1]+1
+
+	return result
 
 def random_lottery():
 	"""Retursn a tuple of which the first element is an array of 5 random,
