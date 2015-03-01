@@ -8,10 +8,6 @@ import requests
 nysixnum = "https://data.ny.gov/resource/d6yy-54nr.json"
 nyfivemeg = "https://data.ny.gov/resource/5xaw-6ayf.json"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c5711b5344ccf508a1156c8e7088743a6e1c7e53
 def get_lottery_data(URL):
 	"""Returns data (which is list of dictionaries) for Lottery"""
 	data = requests.get(URL) #one bigass list where each item is a dictionary. 
