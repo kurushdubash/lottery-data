@@ -1,22 +1,20 @@
 <html>
   <head>
-    <title>Hakker - better than Twitter</title>
+    <title>Lottery Data</title>
   </head>
 
 <body>
 
-<form action='/api/lottery' method='POST'>
+    <form action='/api/lottery' method='POST'>
+      
+      <input type="radio" name="value" value="NY" {{ ny }}>New York Mega Millions <br>
 
-<input type="radio" name="value" value="NY" {{ ny }}>New York Mega Millions
-<br>
-<input type="radio" name="value" value="CA" {{ ca }}>California Lottery
+      <input type="radio" name="value" value="CA" {{ ca }}>California Lottery <br>
+  
+    <input type="submit" />
+    
+    </form>
+<h1>{{ data }}</h1>
 
-<br>
-      <input type="submit" />
-</form>
-			<h1>{{ data }}</h1>
-
-
-  </body>
-
+</body>
 </html>
