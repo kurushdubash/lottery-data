@@ -61,16 +61,21 @@ def parse_data(lst):
 		finallist.append(parse_string_to_listint(element))
 	return finallist
 
-
+def frequency_winning_numbers(lottery_array):
+	result_numbers=[0 for x in range(76)]
+	for element in lottery_array:
+		for element1 in element:
+			result_numbers[element1]=result_numbers[element1]+1
+	return result_numbers
+def frequency_mega(lottery_array):
+	result_numbers=[0 for x in range(16)]
+	for element in lottery_array:
+		result_numbers[element]=result_numbers[element]+1
+	return result_numbers
 def probability(lottery_array):
 	"""Takes in a tuple where lottery_array[0] is an array of 5 get_array_of_numbers
 		and lottery_array[1] is the mega number"""
-	result_numbers=[0 for x in range(76)]
-	for element in lottery_array[0]:
-		for element1 in element:
-			result_numbers[element1]=result_numbers[element1]+1
-
-	return result
+		
 
 def random_lottery():
 	"""Retursn a tuple of which the first element is an array of 5 random,
