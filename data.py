@@ -15,13 +15,14 @@ def get_lottery_data(URL):
 	return data
 
 def get_lottery_numbers(URL):
-	"""takes in URL, returns list (size 1000) of strings of winning numbers"""
+	"""takes in URL, uses parse_data to return a list (size 1000) of list of winning numbers"""
 	# """Returns an array of the frequency of each number in the lottery"""
 	thelist = get_lottery_data(URL)
 	win_numbers = []
 	for element in thelist:
 		win_numbers.append(element['winning_numbers'])
-	return win_numbers
+	finallst = parse_data(win_numbers)
+	return finallst
 
 def how_many_entries(URL):
 	"""should always return 1000, for number of entries"""
