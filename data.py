@@ -20,6 +20,8 @@ def get_lottery_numbers(URL):
 	thelist = get_lottery_data(URL)
 	win_numbers = []
 	for element in thelist:
+		if element["draw_date"]=="2013-10-29T00:00:00":
+			break;
 		win_numbers.append(element['winning_numbers'])
 	finallst = parse_data(win_numbers)
 	return finallst
