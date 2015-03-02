@@ -30,14 +30,29 @@ form {
 }
 
 h1{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-align: center;
+	color: #000099;
+
+}
+
+.ending {
+
+	background: rgba(255,250,250,0.4);
+	border: 2px solid;
+  border-radius: 25px;
 }
 
 div {
 	clear: both;
-	margin: 0 50px;
+/*	margin: 0 50px;*/
 }
-
+/*.container {
+        width: 780px;
+        background: #FFF url(picture.png) no-repeat center top;
+        margin: 0 auto;
+}
+*/
 label {
   width: 200px;
   border-radius: 3px;
@@ -333,7 +348,12 @@ function bumpLayer(n, values) {
 // }
 
 </script>
-    <h1>{{best}}</h1>
+<div class="ending">
+    <h1>Best Lottery Choices: {{best[0]}} {{best[1]}} {{best[2]}} {{best[3]}} {{best[4]}}</h1>
+    <h1>Probability of winning: 4.2139917695473264e-10</h1>
+    <h1>Probability with best choices {{prob}}</h1>
+ </div>
 
+ <br>
 </body>
 </html>

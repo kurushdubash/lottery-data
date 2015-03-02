@@ -28,7 +28,15 @@ def update_data():
     print (data)
     print(len(data))
     best = best_five(data)
-    return render_template('data.html', data=data, best=best, size=len(data), ny=ny, pb=pb)
+
+    listoffive = best
+
+    if(len(listoffive) > 0):
+        prob = find_probability( probability(data), listoffive)
+    else:
+        prob = ''
+
+    return render_template('data.html', data=data, best=best, size=len(data), ny=ny, pb=pb, prob=prob)
 
 def tester(data):
     x = 0
