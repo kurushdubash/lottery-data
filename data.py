@@ -88,10 +88,16 @@ def frequency_winning_numbers(lottery_array):
 	return result_numbers[:count]
 
 def frequency_mega(lottery_array):
-	result_numbers=[0 for x in range(50)]
-	for element in lottery_array:
-		result_numbers[element[0]]=result_numbers[element[0]]+1
-	return result_numbers
+	if type(lottery_array[0]) == int:
+		result_numbers=[0 for x in range(16)]
+		for element in lottery_array:
+			result_numbers[element]=result_numbers[element]+1
+		return result_numbers
+	else:
+		result_numbers=[0 for x in range(50)]
+		for element in lottery_array:
+			result_numbers[element[0]]=result_numbers[element[0]]+1
+		return result_numbers
 	
 def probability(freqlst):
 	"""Takes in a tuple where lottery_array[0] is an array of number frequency by index
