@@ -105,6 +105,12 @@ body {
 	color:#222222; 
 	font-family: 'Wire One', Helvetica, Arial, sans-serif;
 	font-size: 125px;
+/*	background:#000;*/
+	text-align: center;
+
+
+/*Use shadows to slowly build up the glow. The first shadow should be the colour of the text. Subsequent shadows are the colour you want the glow to be, all with no x or y offset and with increasing amounts of blur (the number of shadows you use depends on how big you want the glow to be).*/
+	text-shadow:0 0 10px #222222, 0 0 20px #FFFFCC, 0 0 30px #FFFF99, 0 0 40px #FFFF66, 0 0 50px #FFFF33, 0 0 60px #FFFF00, 0 0 70px #FFCC00;
 }
 
 .theme-invert .btn-default {
