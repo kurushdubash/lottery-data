@@ -15,6 +15,7 @@ def get_data_from_powerball(obj):
 	for lst in obj:
 		workinglst.append(lst[12:33])
 	finallst = parse_data(workinglst[1:])
+	obj.close()
 	return finallst
 
 def get_lottery_data(URL):
