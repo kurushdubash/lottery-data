@@ -103,3 +103,5 @@ def random_lottery():
 def check(keyword):
 	if keyword.upper() == 'NY':
 		return get_lottery_numbers(nyfivemeg)
+	else if keword.upper()== 'PB':
+		return get_lottery_numbers()
