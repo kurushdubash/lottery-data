@@ -11,7 +11,10 @@ everypower = open('powerball.txt', 'r')
 #this is a comment
 
 def get_data_from_allpower(obj):
-	return 0	
+	workinglst = []
+	for lst in obj:
+		workinglst.append(lst[12:33])
+	return workinglst[1:]
 
 def get_lottery_data(URL):
 	"""Returns data (which is list of dictionaries) for Lottery"""
@@ -48,13 +51,14 @@ def get_mega_numbers(URL):
 
 def parse_string_to_listint(string):
 	"""takes in string and converts to int (hardcoded) This is the helper method for parse_data."""
+	string = string.split()
 	length = len(string)
 	newlist = []
-	first = int (string[0] + string[1])
-	second = int (string[3] + string[4])
-	third = int (string[6] + string[7])
-	forth = int (string[9] + string[10])
-	fifth = int (string[12] + string[13])
+	first = int (string[0])
+	second = int (string[1])
+	third = int (string[2])
+	forth = int (string[3])
+	fifth = int (string[4])
 	newlist.append(first)
 	newlist.append(second)
 	newlist.append(third)
