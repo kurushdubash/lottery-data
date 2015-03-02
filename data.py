@@ -7,8 +7,11 @@ import requests
 
 nysixnum = "https://data.ny.gov/resource/d6yy-54nr.json"
 nyfivemeg = "https://data.ny.gov/resource/5xaw-6ayf.json"
-
+everypower = open('powerball.txt', 'r')
 #this is a comment
+
+def get_data_from_allpower(obj):
+	return 0	
 
 def get_lottery_data(URL):
 	"""Returns data (which is list of dictionaries) for Lottery"""
@@ -106,5 +109,10 @@ def random_lottery():
 def check(keyword):
 	if keyword.upper() == 'NY':
 		return get_lottery_numbers(nyfivemeg)
+<<<<<<< HEAD
+	# else if keyword.upper() == 'PB':
+	# 	return get_lottery_numbers()
+=======
 	elif keword.upper()== 'PB':
 		return get_lottery_numbers()
+>>>>>>> 048f1f0c87f23d459b2643b0fab95ffdf78594b6
