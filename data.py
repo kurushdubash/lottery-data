@@ -7,10 +7,10 @@ import requests
 
 nysixnum = "https://data.ny.gov/resource/d6yy-54nr.json"
 nyfivemeg = "https://data.ny.gov/resource/5xaw-6ayf.json"
-everypower = open('powerball.txt', 'r')
 #this is a comment
 
-def get_data_from_powerball(obj):
+def get_data_from_powerball():
+	everypower = open('powerball.txt', 'r')
 	workinglst = []
 	for lst in obj:
 		workinglst.append(lst[12:33])
@@ -119,5 +119,5 @@ def check(keyword):
 	if keyword.upper() == 'NY':
 		return get_lottery_numbers(nyfivemeg)
 	elif keyword.upper()== 'PB':
-		return get_data_from_powerball(everypower)
+		return get_data_from_powerball()
 
