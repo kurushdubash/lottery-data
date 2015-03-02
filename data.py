@@ -21,7 +21,7 @@ def get_mega_data():
 	everypower = open('powerball.txt', 'r')
 	workinglst = []
 	for lst in everypower:
-		workinglst.append(lst[35:37])
+		workinglst.append(lst[32:34])
 	finallst = parse_data(workinglst[1:])
 	everypower.close()
 	return finallst
@@ -63,16 +63,10 @@ def parse_string_to_listint(string):
 	string = string.split()
 	length = len(string)
 	newlist = []
-	first = int (string[0])
-	second = int (string[1])
-	third = int (string[2])
-	forth = int (string[3])
-	fifth = int (string[4])
-	newlist.append(first)
-	newlist.append(second)
-	newlist.append(third)
-	newlist.append(forth)
-	newlist.append(fifth)
+	count = 0
+	while count < length:
+		newlist.append(int (string[count]))
+		count = count + 1
 	return newlist
 
 def parse_data(lst):
@@ -93,15 +87,11 @@ def frequency_winning_numbers(lottery_array):
 		count+=1
 	return result_numbers[:count]
 
-
 def frequency_mega(lottery_array):
-	result_numbers=[0 for x in range(39)]
+	result_numbers=[0 for x in range(50)]
 	for element in lottery_array:
-		result_numbers[element]=result_numbers[element]+1
-	count=1
-	while(count<39 and result_numbers[count]!=0):
-		count+=1
-	return result_numbers[:count]
+		result_numbers[element[0]]=result_numbers[element[0]]+1
+	return result_numbers
 	
 def probability(freqlst):
 	"""Takes in a tuple where lottery_array[0] is an array of number frequency by index
@@ -136,7 +126,6 @@ def best_mega(freqlst):
 def best_five(freqlst):
 	temp=sorted(range(len(freqlst)),key=lambda i:freqlst[i])
 	return [temp[-1],temp[-2],temp[-3],temp[-4],temp[-5]]
-
 
 def check(keyword):
 	if keyword.upper() == 'NY':
