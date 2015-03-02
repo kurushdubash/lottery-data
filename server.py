@@ -22,13 +22,18 @@ def update_data():
         ca = 'checked'
 
     data = frequency_winning_numbers(check(val))
-    # data = []
-    # x = 0
-    # while x < 25:
-    #     data.append(randint(1, 25))
-    #     x+=1
+    #data = [tester([]),tester([])]
+
+
     print (data)
     return render_template('data.html', data=data, size=len(data), ny=ny, ca=ca)
+
+def tester(data):
+    x = 0
+    while x < 25:
+        data.append(randint(1, 25))
+        x+=1
+    return data
 
 if __name__ == "__main__":
     app.debug = True
