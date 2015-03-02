@@ -78,6 +78,7 @@ def frequency_mega(lottery_array):
 	for element in lottery_array:
 		result_numbers[element]=result_numbers[element]+1
 	return result_numbers
+	
 def probability(freqlst):
 	"""Takes in a tuple where lottery_array[0] is an array of number frequency by index
 		and lottery_array[1] is the frequency of mega numbers by index"""
