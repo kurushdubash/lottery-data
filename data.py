@@ -76,15 +76,33 @@ def frequency_mega(lottery_array):
 	for element in lottery_array:
 		result_numbers[element]=result_numbers[element]+1
 	return result_numbers
-def probability(lottery_array):
+def probability(freqlst):
 	"""Takes in a tuple where lottery_array[0] is an array of number frequency by index
 		and lottery_array[1] is the frequency of mega numbers by index"""
-	return 0;
+<<<<<<< HEAD
+
 
 def top_five(percent):
 	"Takes in an list filled with the probabilities of each number corresponding to the index"
 	"And outputs the five best numbers"
 
+=======
+	problist = []
+	total = 0
+	totes = 0
+	for elem in freqlst:
+		total = total + elem
+	print("total is ", total)
+	for item in freqlst:
+		prob = item / total
+		problist.append(prob)
+	for la in problist:
+		totes = totes + la
+	print("this should be one: ", totes)
+	return problist
+	
+	
+>>>>>>> 6f786d70b1634c040a7690bb5b52afad2405f090
 
 def random_lottery():
 	"""Retursn a tuple of which the first element is an array of 5 random,
