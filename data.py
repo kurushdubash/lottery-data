@@ -58,15 +58,32 @@ def get_mega_numbers(URL):
 		result.append(int (e["mega_ball"]))
 	return result
 
+# def parse_string_to_listint(string):
+# 	"""takes in string and converts to int (hardcoded) This is the helper method for parse_data."""
+# 	string = string.split()
+# 	length = len(string)
+# 	newlist = []
+# 	count = 0
+# 	while count < length:
+# 		newlist.append(int (string[count]))
+# 		count = count + 1
+# 	return newlist
+
 def parse_string_to_listint(string):
 	"""takes in string and converts to int (hardcoded) This is the helper method for parse_data."""
 	string = string.split()
 	length = len(string)
 	newlist = []
-	count = 0
-	while count < length:
-		newlist.append(int (string[count]))
-		count = count + 1
+	first = int (string[0])
+	second = int (string[1])
+	third = int (string[2])
+	forth = int (string[3])
+	fifth = int (string[4])
+	newlist.append(first)
+	newlist.append(second)
+	newlist.append(third)
+	newlist.append(forth)
+	newlist.append(fifth)
 	return newlist
 
 def parse_data(lst):
