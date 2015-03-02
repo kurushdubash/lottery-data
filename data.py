@@ -82,7 +82,7 @@ def frequency_winning_numbers(lottery_array):
 		for element1 in element:
 			result_numbers[element1]=result_numbers[element1]+1
 	count=1
-	while(result_numbers[count]!=0):
+	while(count<75 && result_numbers[count]!=0):
 		count+=1
 	return result_numbers[:count]
 def frequency_mega(lottery_array):
