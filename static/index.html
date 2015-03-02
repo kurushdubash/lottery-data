@@ -37,7 +37,7 @@ div {
 label {
   width: 200px;
   border-radius: 3px;
-  border: 1px solid #D1D3D4
+  border: 1px solid #444E52
 }
 
 /* hide input */
@@ -75,11 +75,12 @@ input.radio:empty ~ label:before {
 input.radio:hover:not(:checked) ~ label:before {
 	content:'\2714';
 	text-indent: .9em;
-	color: #C2C2C2;
+	color: #F4D922; /* #C2C2C2 */
 }
 
 input.radio:hover:not(:checked) ~ label {
-	color: #888;
+	color: #F4D922; 
+	/*#888*/
 }
 
 /* toggle on */
@@ -115,19 +116,20 @@ input.radio:focus ~ label:before {
 				<h3 class="tagline">
 				</h3>
 				<div>
-						<input type="radio" name="value" value="NY" id="radio1" class="radio" checked/>
-						<label for="radio1">New York Mega Millions</label>
-						</div>
+					<div>
+							<input type="radio" name="value" id="radio1" class="radio" checked/>
+							<label for="radio1" style="margin-right: 270px; margin-left: 270px;">First Option</label>
+							</div>
 
-						<div>
-						<input type="radio" name="value" value="PB" id="radio2" class="radio"/>
-						<label for="radio2">Powerball</label>
-						</div>
-				
-				<!-- Nice place to describe your site in a sentence or two -->
-				<p><input type="submit" class="btn btn-default btn-lg" /></p>
-	
-			</div> <!-- /col -->
+							<div>
+							<input type="radio" name="value" id="radio2" class="radio"/>
+							<label for="radio2" style="margin-right: 270px; margin-left: 270px;">Second Option</label>
+							</div>
+					
+					<!-- Nice place to describe your site in a sentence or two -->
+					<p><input type="submit" class="btn btn-default btn-lg" style="margin-top: 50px; margin-right: 250px; margin-left: 250px;" /></p>
+					</div> <!-- /col -->
+				</div>
 		</div> <!-- /row -->
 	
 	</div>
