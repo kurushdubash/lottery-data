@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return app.send_static_file('index.html')
+    return app.send_static_file('index2.html')
 
 
 @app.route("/api/lottery", methods=["POST"])
@@ -16,17 +16,19 @@ def update_data():
     val = request.form['value']
     if(val == 'NY'):
         ny = 'checked'
-        ca = ''
+        pb = ''
     else:
         ny = ''
-        ca = 'checked'
+        pb = 'checked'
 
     data = frequency_winning_numbers(check(val))
     #data = [tester([]),tester([])]
 
 
     print (data)
-    return render_template('data.html', data=data, size=len(data), ny=ny, ca=ca)
+    print(len(data))
+    best = best_five(data)
+    return render_template('data.html', data=data, best=best, size=len(data), ny=ny, pb=pb)
 
 def tester(data):
     x = 0
