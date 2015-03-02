@@ -110,13 +110,13 @@ body {
 	width: 100%; 
 	overflow:auto;
 	height:100%;
-	padding-top:100px;
+	padding-top:0px;
 	padding-bottom:50px; 
 	display:none;
 	top:0;
 } 
 @media (min-width: 768px) {
-	.section { padding-top:160px;}
+	.section { padding-top:0px;}
 }
 
 /* Show one of sections */
@@ -144,6 +144,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	margin-bottom:15px; 
 	color:#FDF9F4; 
 	line-height:1em;
+
 }
 .subtitle { 
 	line-height:.9em;
