@@ -10,11 +10,12 @@ nyfivemeg = "https://data.ny.gov/resource/5xaw-6ayf.json"
 everypower = open('powerball.txt', 'r')
 #this is a comment
 
-def get_data_from_allpower(obj):
+def get_data_from_powerball(obj):
 	workinglst = []
 	for lst in obj:
 		workinglst.append(lst[12:33])
-	return workinglst[1:]
+	finallst = parse_data(workinglst[1:])
+	return finallst
 
 def get_lottery_data(URL):
 	"""Returns data (which is list of dictionaries) for Lottery"""
@@ -113,6 +114,6 @@ def random_lottery():
 def check(keyword):
 	if keyword.upper() == 'NY':
 		return get_lottery_numbers(nyfivemeg)
-	elif keword.upper()== 'PB':
-		return get_lottery_numbers()
+	elif keyword.upper()== 'PB':
+		return get_data_from_powerball(everypower)
 
