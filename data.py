@@ -79,8 +79,12 @@ def frequency_mega(lottery_array):
 def probability(lottery_array):
 	"""Takes in a tuple where lottery_array[0] is an array of number frequency by index
 		and lottery_array[1] is the frequency of mega numbers by index"""
-	
-	
+	return 0;
+
+def top_five(percent):
+	"Takes in an list filled with the probabilities of each number corresponding to the index"
+	"And outputs the five best numbers"
+
 
 def random_lottery():
 	"""Retursn a tuple of which the first element is an array of 5 random,
@@ -90,3 +94,5 @@ def random_lottery():
 def check(keyword):
 	if keyword.upper() == 'NY':
 		return get_lottery_numbers(nyfivemeg)
+	else if keword.upper()== 'PB':
+		return get_lottery_numbers()
