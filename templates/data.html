@@ -107,12 +107,12 @@ input.radio:focus ~ label:before {
 				<div>
 					<div>
 						<form action='/api/lottery' method='POST'>
-							<input type="radio" name="value" id="radio1" value="NY" class="radio" checked/>
+							<input type="radio" name="value" id="radio1" value="NY" class="radio" {{ny}}/>
 							<label for="radio1" style="margin-right: 270px; margin-left: 270px;">NY Megamillions</label>
 							</div>
 
 							<div>
-							<input type="radio" name="value" id="radio2" value="PB" class="radio"/>
+							<input type="radio" name="value" id="radio2" value="PB" class="radio" {{pb}}/>
 							<label for="radio2" style="margin-right: 270px; margin-left: 270px;">Powerball</label>
 							</div>
 							<p><input type="submit" class="btn btn-default btn-lg" style="margin-top: 50px; margin-right: 250px; margin-left: 250px;" /></p>
@@ -146,7 +146,7 @@ input.radio:focus ~ label:before {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
-/*  position: relative;*/
+  position: relative;
   width: 960px;
 }
 
@@ -340,8 +340,8 @@ function bumpLayer(n, values) {
 <div class="ending">
 	
     <h1><strong>Best Lottery Choices: {{best[0]}} {{best[1]}} {{best[2]}} {{best[3]}} {{best[4]}}</strong></h1>
-    <h1><strong>Probability of winning: 4.2139917695473264e-10</strong</h1>
-    <h1><strong>Probability with best choices {{prob}}</strong</h1>
+    <h1><strong>Probability of winning: 4.2139917695473264e-10</strong></h1>
+    <h1><strong>Probability with best choices {{prob}}</strong></h1>
  </div>
 
  <br>
