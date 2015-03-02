@@ -22,8 +22,8 @@ def update_data():
         pb = 'checked'
 
     data = frequency_winning_numbers(check(val))
-    mega = frequency_mega(check1(val))
-    bm = best_mega(mega)
+    # mega = frequency_mega(check1(val))
+    # bm = best_mega(mega)
     #data = [tester([]),tester([])]
 
 
@@ -39,7 +39,7 @@ def update_data():
         prob = ''
 
 
-    return render_template('data.html', data=data, best=best, size=len(data), ny=ny, pb=pb, prob=prob, bm=bm)
+    return render_template('data.html', data=data, best=best, size=len(data), ny=ny, pb=pb, prob=prob)
 
 def tester(data):
     x = 0

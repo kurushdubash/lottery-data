@@ -17,14 +17,7 @@ def get_data_from_powerball():
 	finallst = parse_data(workinglst[1:])
 	everypower.close()
 	return finallst
-def get_mega_data():
-	everypower = open('powerball.txt', 'r')
-	workinglst = []
-	for lst in everypower:
-		workinglst.append(lst[32:34])
-	finallst = parse_data(workinglst[1:])
-	everypower.close()
-	return finallst
+
 def get_lottery_data(URL):
 	"""Returns data (which is list of dictionaries) for Lottery"""
 	data = requests.get(URL) #one bigass list where each item is a dictionary. 
@@ -57,17 +50,6 @@ def get_mega_numbers(URL):
 			break;
 		result.append(int (e["mega_ball"]))
 	return result
-
-# def parse_string_to_listint(string):
-# 	"""takes in string and converts to int (hardcoded) This is the helper method for parse_data."""
-# 	string = string.split()
-# 	length = len(string)
-# 	newlist = []
-# 	count = 0
-# 	while count < length:
-# 		newlist.append(int (string[count]))
-# 		count = count + 1
-# 	return newlist
 
 def parse_string_to_listint(string):
 	"""takes in string and converts to int (hardcoded) This is the helper method for parse_data."""
@@ -103,18 +85,11 @@ def frequency_winning_numbers(lottery_array):
 	while(count<75 and result_numbers[count]!=0):
 		count+=1
 	return result_numbers[:count]
-
 def frequency_mega(lottery_array):
-	if type(lottery_array[0]) == int:
-		result_numbers=[0 for x in range(16)]
-		for element in lottery_array:
-			result_numbers[element]=result_numbers[element]+1
-		return result_numbers
-	else:
-		result_numbers=[0 for x in range(50)]
-		for element in lottery_array:
-			result_numbers[element[0]]=result_numbers[element[0]]+1
-		return result_numbers
+	result_numbers=[0 for x in range(16)]
+	for element in lottery_array:
+		result_numbers[element]=result_numbers[element]+1
+	return result_numbers
 	
 def probability(freqlst):
 	"""Takes in a tuple where lottery_array[0] is an array of number frequency by index
@@ -142,22 +117,19 @@ def find_probability(problist, listoffive):
 		totprob = totprob * n
 	return totprob
 
-def best_mega(freqlst):
-	temp=sorted(range(len(freqlst)),key=lambda i:freqlst[i])
-	return [temp[-1]]
 
+	
 def best_five(freqlst):
 	temp=sorted(range(len(freqlst)),key=lambda i:freqlst[i])
 	return [temp[-1],temp[-2],temp[-3],temp[-4],temp[-5]]
+
+def random_lottery():
+	"""Retursn a tuple of which the first element is an array of 5 random,
+		non duplicate numbers, and the second element is a mega number"""
+	return 0
 
 def check(keyword):
 	if keyword.upper() == 'NY':
 		return get_lottery_numbers(nyfivemeg)
 	elif keyword.upper()== 'PB':
 		return get_data_from_powerball()
-
-def check1(keyword):
-	if keyword.upper()=='NY':
-		return get_mega_numbers(nyfivemeg)
-	elif keyword.upper()=='PB':
-		return get_mega_data()
