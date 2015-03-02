@@ -103,7 +103,8 @@ body {
 .theme-invert .subtitle,
 .theme-invert .tagline { 
 	color:#222222; 
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Wire One', Helvetica, Arial, sans-serif;
+	font-size: 125px;
 }
 
 .theme-invert .btn-default {

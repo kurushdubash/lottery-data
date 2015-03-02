@@ -99,11 +99,10 @@ input.radio:focus ~ label:before {
 	<div class="container">
 
 		<div class="row">
-			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
+			<div class=" text-center">	
 
 				<!-- Site Title, your name, HELLO msg, etc. -->
 				<h1 class="title">Millionbears</h1>
-				<h2 class="subtitle"></h2>
 
 				<div>
 					<div>
@@ -166,14 +165,18 @@ text {
 
 
 h1{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Wire One', Helvetica, Arial, sans-serif;
 	text-align: center;
 	color: #000099;
+
 }
 .ending {
 	background: rgba(255,250,250,0.4);
 	border: 2px solid;
-  border-radius: 25px;
+  	border-radius: 25px;
+  	font-family: 'Wire One', Helvetica, Arial, sans-serif;
+  	font-weight: bold;
+	letter-spacing: 3px;
 }
 
 /*form {
@@ -335,9 +338,10 @@ function bumpLayer(n, values) {
 
 </script>
 <div class="ending">
-    <h1>Best Lottery Choices: {{best[0]}} {{best[1]}} {{best[2]}} {{best[3]}} {{best[4]}}</h1>
-    <h1>Probability of winning: 4.2139917695473264e-10</h1>
-    <h1>Probability with best choices {{prob}}</h1>
+	
+    <h1><strong>Best Lottery Choices: {{best[0]}} {{best[1]}} {{best[2]}} {{best[3]}} {{best[4]}}</strong></h1>
+    <h1><strong>Probability of winning: 4.2139917695473264e-10</strong</h1>
+    <h1><strong>Probability with best choices {{prob}}</strong</h1>
  </div>
 
  <br>
