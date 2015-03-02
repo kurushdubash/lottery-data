@@ -89,16 +89,16 @@ def probability(freqlst):
 	totes = 0
 	for elem in freqlst:
 		total = total + elem
-	print("total is ", total)
 	for item in freqlst:
 		prob = item / total
 		problist.append(prob)
 	for la in problist:
 		totes = totes + la
-	print("this should be one: ", totes)
 	return problist
 	
-
+def best_five(freqlst):
+	temp=sorted(range(len(freqlst)),key=lambda i:freqlst[i])
+	return [temp[-1],temp[-2],temp[-3],temp[-4],temp[-5]]
 
 def random_lottery():
 	"""Retursn a tuple of which the first element is an array of 5 random,
@@ -108,5 +108,10 @@ def random_lottery():
 def check(keyword):
 	if keyword.upper() == 'NY':
 		return get_lottery_numbers(nyfivemeg)
+<<<<<<< HEAD
 	# else if keyword.upper() == 'PB':
 	# 	return get_lottery_numbers()
+=======
+	elif keword.upper()== 'PB':
+		return get_lottery_numbers()
+>>>>>>> 048f1f0c87f23d459b2643b0fab95ffdf78594b6
