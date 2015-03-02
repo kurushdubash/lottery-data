@@ -65,22 +65,22 @@ input.radio:empty ~ label:before {
 /* toggle hover */
 input.radio:hover:not(:checked) ~ label:before {
 	content:'\2714';
-	text-indent: .9em;
-	color: #F4D922; /* #C2C2C2 */
+	text-indent: .3em;
+	color: #6F6E6E;
 }
 input.radio:hover:not(:checked) ~ label {
-	color: #F4D922; 
+	color: #6F6E6E; 
 	/*#888*/
 }
 /* toggle on */
 input.radio:checked ~ label:before {
 	content:'\2714';
-	text-indent: .9em;
+	text-indent: .3em;
 	color: #9CE2AE;
 	background-color: #4DCB6D;
 }
 input.radio:checked ~ label {
-	color: #777;
+	color: #242020;
 }
 /* radio focus */
 input.radio:focus ~ label:before {
@@ -99,9 +99,6 @@ input.radio:focus ~ label:before {
 				<h1 class="title">Lottery Data</h1>
 				<h2 class="subtitle"></h2>
 
-				<!-- Short introductory (optional) -->
-				<h3 class="tagline">
-				</h3>
 				<div>
 					<div>
 						<form action='/api/lottery' method='POST'>
