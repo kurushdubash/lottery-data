@@ -12,10 +12,10 @@ nyfivemeg = "https://data.ny.gov/resource/5xaw-6ayf.json"
 def get_data_from_powerball():
 	everypower = open('powerball.txt', 'r')
 	workinglst = []
-	for lst in obj:
+	for lst in everypower:
 		workinglst.append(lst[12:33])
 	finallst = parse_data(workinglst[1:])
-	obj.close()
+	everypower.close()
 	return finallst
 
 def get_lottery_data(URL):
