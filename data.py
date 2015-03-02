@@ -79,8 +79,8 @@ def frequency_mega(lottery_array):
 def probability(lottery_array):
 	"""Takes in a tuple where lottery_array[0] is an array of number frequency by index
 		and lottery_array[1] is the frequency of mega numbers by index"""
-
-		
+	
+	
 
 def random_lottery():
 	"""Retursn a tuple of which the first element is an array of 5 random,
