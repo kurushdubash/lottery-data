@@ -87,5 +87,6 @@ def random_lottery():
 		non duplicate numbers, and the second element is a mega number"""
 	return 0
 
-
-
+def check(keyword):
+	if keyword.upper() == 'NY':
+		return get_lottery_numbers(nyfivemeg)

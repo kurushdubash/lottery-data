@@ -21,12 +21,12 @@ def update_data():
         ny = ''
         ca = 'checked'
 
-    #data = get_lottery_numbers()
-    data = []
-    x = 0
-    while x < 25:
-        data.append(randint(1, 25))
-        x+=1
+    data = frequency_winning_numbers(check(val))
+    # data = []
+    # x = 0
+    # while x < 25:
+    #     data.append(randint(1, 25))
+    #     x+=1
     print (data)
     return render_template('data.html', data=data, size=len(data), ny=ny, ca=ca)
 
