@@ -93,7 +93,7 @@ def probability(freqlst):
 	print("this should be one: ", totes)
 	return problist
 	
-	
+
 
 def random_lottery():
 	"""Retursn a tuple of which the first element is an array of 5 random,
