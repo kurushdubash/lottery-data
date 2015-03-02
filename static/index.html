@@ -66,21 +66,21 @@ input.radio:empty ~ label:before {
 input.radio:hover:not(:checked) ~ label:before {
 	content:'\2714';
 	text-indent: .3em;
-	color: #6F6E6E;
+	color: #000;
 }
 input.radio:hover:not(:checked) ~ label {
-	color: #6F6E6E; 
+	color: #000; 
 	/*#888*/
 }
 /* toggle on */
 input.radio:checked ~ label:before {
 	content:'\2714';
 	text-indent: .3em;
-	color: #9CE2AE;
+	color: #B80000 ;
 	background-color: #4DCB6D;
 }
 input.radio:checked ~ label {
-	color: #242020;
+	color: #000033;
 }
 /* radio focus */
 input.radio:focus ~ label:before {
@@ -103,7 +103,7 @@ input.radio:focus ~ label:before {
 					<div>
 						<form action='/api/lottery' method='POST'>
 							<input type="radio" name="value" id="radio1" value="NY" class="radio" checked/>
-							<label for="radio1" style="margin-right: 270px; margin-left: 270px;">New York Megamillions</label>
+							<label for="radio1" style="margin-right: 270px; margin-left: 270px;">NY Megamillions</label>
 							</div>
 
 							<div>
