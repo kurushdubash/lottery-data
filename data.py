@@ -105,6 +105,19 @@ def probability(freqlst):
 	for la in problist:
 		totes = totes + la
 	return problist
+
+def find_probability(problist, listoffive):
+	"""given result of probability and list of 5 numbers, return the probability 
+		that all 5 hit. Should always be less than result of best_five"""
+	probs = []
+	for i in listoffive:
+		probs.append(problist[i])
+	totprob = 1
+	for n in probs:
+		totprob = totprob * n
+	return totprob
+
+
 	
 def best_five(freqlst):
 	temp=sorted(range(len(freqlst)),key=lambda i:freqlst[i])
