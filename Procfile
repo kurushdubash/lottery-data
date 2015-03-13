@@ -1,1 +1,1 @@
-web: gunicorn server:app Å\log-file=-
+web: gunicorn server:app ólog-file=-
